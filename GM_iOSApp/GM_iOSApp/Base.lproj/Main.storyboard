@@ -89,11 +89,17 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="naf-pC-px8"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="pXi-dR-9fa">
+                                <rect key="frame" x="197" y="465" width="20" height="20"/>
+                                <color key="color" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HJU-Ej-VAQ" secondAttribute="bottom" id="0wd-dP-Lqo"/>
                             <constraint firstItem="HJU-Ej-VAQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4Lg-Xq-X1X"/>
+                            <constraint firstItem="pXi-dR-9fa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Fql-Yv-zcm"/>
+                            <constraint firstItem="pXi-dR-9fa" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="HHn-fv-MeV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HJU-Ej-VAQ" secondAttribute="trailing" id="MXp-fD-I0e"/>
                             <constraint firstItem="HJU-Ej-VAQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dwl-5u-ghQ"/>
                         </constraints>
@@ -101,12 +107,68 @@
                     </view>
                     <navigationItem key="navigationItem" id="afi-GW-kl3"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="pXi-dR-9fa" id="QTr-sY-PTb"/>
                         <outlet property="tableViewUserCommits" destination="HJU-Ej-VAQ" id="hPC-26-nab"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-226.08695652173915" y="81.696428571428569"/>
+        </scene>
+        <!--Commit Details View Controller-->
+        <scene sceneID="zIW-RN-dK2">
+            <objects>
+                <viewController storyboardIdentifier="CommitDetailViewContoller" id="ZtF-Dd-tee" customClass="CommitDetailsViewController" customModule="GM_iOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lrs-Th-zkN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Lb-V4-jSO">
+                                <rect key="frame" x="20" y="142" width="374" height="21.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMU-au-Zgq">
+                                <rect key="frame" x="20" y="186" width="374" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nVj-q5-33I">
+                                <rect key="frame" x="17" y="208.5" width="374" height="191"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="191" id="eAn-GX-zj5"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Lb-V4-jSO" firstAttribute="leading" secondItem="bSL-gD-JdP" secondAttribute="leading" constant="20" id="AXd-i7-rd0"/>
+                            <constraint firstItem="bSL-gD-JdP" firstAttribute="trailing" secondItem="eMU-au-Zgq" secondAttribute="trailing" constant="20" id="Lwn-o5-LzP"/>
+                            <constraint firstItem="bSL-gD-JdP" firstAttribute="trailing" secondItem="nVj-q5-33I" secondAttribute="trailing" constant="23" id="MpP-iq-4Xo"/>
+                            <constraint firstItem="eMU-au-Zgq" firstAttribute="leading" secondItem="bSL-gD-JdP" secondAttribute="leading" constant="20" id="SGx-1O-p4i"/>
+                            <constraint firstItem="bSL-gD-JdP" firstAttribute="trailing" secondItem="6Lb-V4-jSO" secondAttribute="trailing" constant="20" id="V8P-tq-88i"/>
+                            <constraint firstItem="6Lb-V4-jSO" firstAttribute="top" secondItem="bSL-gD-JdP" secondAttribute="top" constant="98" id="eXC-ci-zNs"/>
+                            <constraint firstItem="eMU-au-Zgq" firstAttribute="top" secondItem="6Lb-V4-jSO" secondAttribute="bottom" constant="22.5" id="j1s-gD-dtw"/>
+                            <constraint firstItem="nVj-q5-33I" firstAttribute="top" secondItem="eMU-au-Zgq" secondAttribute="bottom" constant="5.5" id="oWN-Br-Q5Q"/>
+                            <constraint firstItem="nVj-q5-33I" firstAttribute="leading" secondItem="bSL-gD-JdP" secondAttribute="leading" constant="17" id="zIv-aE-tzJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bSL-gD-JdP"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelCommitHash" destination="eMU-au-Zgq" id="mXB-0c-1cv"/>
+                        <outlet property="labelCommiterName" destination="6Lb-V4-jSO" id="8R5-Df-1u8"/>
+                        <outlet property="textViewCommitMessage" destination="nVj-q5-33I" id="6Kp-Mz-hza"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ci-lG-CtH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="660.86956521739137" y="81.696428571428569"/>
         </scene>
     </scenes>
 </document>

@@ -8,4 +8,4 @@
 
 import Foundation
 
-let commitsListURL = "https://api.github.com/repos/nikhil-code07/GM_iOSApp/commits"
+let commitsListURL = "https://api.github.com/repos/twitter/bootstrap/commits"

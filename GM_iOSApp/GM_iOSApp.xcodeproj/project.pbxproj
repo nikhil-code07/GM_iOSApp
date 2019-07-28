@@ -22,6 +22,7 @@
 		58ED40BF22EE390C0024DAA0 /* CommitDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED40BE22EE390C0024DAA0 /* CommitDetails.swift */; };
 		58ED40C122EE49F40024DAA0 /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED40C022EE49F40024DAA0 /* Commit.swift */; };
 		58ED40C322EE4A630024DAA0 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED40C222EE4A630024DAA0 /* Author.swift */; };
+		58ED40C522EE56480024DAA0 /* CommitDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED40C422EE56480024DAA0 /* CommitDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		58ED40BE22EE390C0024DAA0 /* CommitDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitDetails.swift; sourceTree = "<group>"; };
 		58ED40C022EE49F40024DAA0 /* Commit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
 		58ED40C222EE4A630024DAA0 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		58ED40C422EE56480024DAA0 /* CommitDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			children = (
 				58ED40AE22EDF5E10024DAA0 /* UserCommitsViewController.swift */,
 				58ED40B022EDF6180024DAA0 /* UserCommitsTableViewCell.swift */,
+				58ED40C422EE56480024DAA0 /* CommitDetailsViewController.swift */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				58ED40BA22EE0B5A0024DAA0 /* AppConstants.swift in Sources */,
 				58ED40BC22EE0F6E0024DAA0 /* RequestResult.swift in Sources */,
 				58ED40C322EE4A630024DAA0 /* Author.swift in Sources */,
+				58ED40C522EE56480024DAA0 /* CommitDetailsViewController.swift in Sources */,
 				58ED40B422EE01DB0024DAA0 /* NetworkManager.swift in Sources */,
 				58ED40AF22EDF5E10024DAA0 /* UserCommitsViewController.swift in Sources */,
 				58ED40BF22EE390C0024DAA0 /* CommitDetails.swift in Sources */,
