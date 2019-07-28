@@ -15,6 +15,9 @@
 		58ED40A022ED24E70024DAA0 /* GM_iOSAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED409F22ED24E70024DAA0 /* GM_iOSAppUITests.swift */; };
 		58ED40AF22EDF5E10024DAA0 /* UserCommitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED40AE22EDF5E10024DAA0 /* UserCommitsViewController.swift */; };
 		58ED40B122EDF6180024DAA0 /* UserCommitsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED40B022EDF6180024DAA0 /* UserCommitsTableViewCell.swift */; };
+		58ED40B422EE01DB0024DAA0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED40B322EE01DB0024DAA0 /* NetworkManager.swift */; };
+		58ED40B622EE068B0024DAA0 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED40B522EE068B0024DAA0 /* RequestManager.swift */; };
+		58ED40BA22EE0B5A0024DAA0 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED40B922EE0B5A0024DAA0 /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		58ED40A122ED24E70024DAA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58ED40AE22EDF5E10024DAA0 /* UserCommitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCommitsViewController.swift; sourceTree = "<group>"; };
 		58ED40B022EDF6180024DAA0 /* UserCommitsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCommitsTableViewCell.swift; sourceTree = "<group>"; };
+		58ED40B322EE01DB0024DAA0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		58ED40B522EE068B0024DAA0 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		58ED40B922EE0B5A0024DAA0 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,8 @@
 		58ED407E22ED24E20024DAA0 /* GM_iOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				58ED40B822EE0B360024DAA0 /* Utility */,
+				58ED40B222EE01C50024DAA0 /* Network Manager */,
 				58ED40AD22EDEF0F0024DAA0 /* UI Components */,
 				58ED407F22ED24E20024DAA0 /* AppDelegate.swift */,
 				58ED408322ED24E20024DAA0 /* Main.storyboard */,
@@ -134,6 +142,23 @@
 				58ED40B022EDF6180024DAA0 /* UserCommitsTableViewCell.swift */,
 			);
 			path = "UI Components";
+			sourceTree = "<group>";
+		};
+		58ED40B222EE01C50024DAA0 /* Network Manager */ = {
+			isa = PBXGroup;
+			children = (
+				58ED40B322EE01DB0024DAA0 /* NetworkManager.swift */,
+				58ED40B522EE068B0024DAA0 /* RequestManager.swift */,
+			);
+			path = "Network Manager";
+			sourceTree = "<group>";
+		};
+		58ED40B822EE0B360024DAA0 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				58ED40B922EE0B5A0024DAA0 /* AppConstants.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +292,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58ED40B622EE068B0024DAA0 /* RequestManager.swift in Sources */,
+				58ED40BA22EE0B5A0024DAA0 /* AppConstants.swift in Sources */,
+				58ED40B422EE01DB0024DAA0 /* NetworkManager.swift in Sources */,
 				58ED40AF22EDF5E10024DAA0 /* UserCommitsViewController.swift in Sources */,
 				58ED408022ED24E20024DAA0 /* AppDelegate.swift in Sources */,
 				58ED40B122EDF6180024DAA0 /* UserCommitsTableViewCell.swift in Sources */,
