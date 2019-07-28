@@ -12,7 +12,8 @@ class NetworkManager {
     
     static let shared = NetworkManager()
     
-    func request(urlString:String, completion: @escaping (Int) -> Void )  {
+    let errorMessage = "something went wrong while getting the data"
+    func request(urlString:String, completion: @escaping (RequestResult<[CommitDetails]>) -> Void )  {
         
         guard let request = RequestManager.init(urlString: urlString, requestMethod: .GET) else{
             return
@@ -20,8 +21,29 @@ class NetworkManager {
         
         URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { (data,response,error) in
             
+            guard error == nil else{
+                return completion(.FAILURE(error?.localizedDescription ?? self.errorMessage))
+            }
             
-        })
+            guard let data = data else{
+                return completion(.FAILURE(error?.localizedDescription ?? self.errorMessage))
+            }
+            
+            guard let parsedData = self.parseResponse(data: data) else{
+                return completion(.FAILURE(error?.localizedDescription ?? self.errorMessage))
+            }
+            completion(.SUCCESS(parsedData))
+        }).resume()
         
+    }
+    
+    func parseResponse(data:Data) -> [CommitDetails]?{
+        do{
+        let jsonResponse = try JSONDecoder().decode([CommitDetails].self, from: data)
+            return jsonResponse
+        }catch{
+            print(error.localizedDescription)
+        }
+        return nil
     }
 }

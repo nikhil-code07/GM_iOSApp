@@ -18,6 +18,10 @@
 		58ED40B422EE01DB0024DAA0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED40B322EE01DB0024DAA0 /* NetworkManager.swift */; };
 		58ED40B622EE068B0024DAA0 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED40B522EE068B0024DAA0 /* RequestManager.swift */; };
 		58ED40BA22EE0B5A0024DAA0 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED40B922EE0B5A0024DAA0 /* AppConstants.swift */; };
+		58ED40BC22EE0F6E0024DAA0 /* RequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED40BB22EE0F6E0024DAA0 /* RequestResult.swift */; };
+		58ED40BF22EE390C0024DAA0 /* CommitDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED40BE22EE390C0024DAA0 /* CommitDetails.swift */; };
+		58ED40C122EE49F40024DAA0 /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED40C022EE49F40024DAA0 /* Commit.swift */; };
+		58ED40C322EE4A630024DAA0 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED40C222EE4A630024DAA0 /* Author.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		58ED40B322EE01DB0024DAA0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		58ED40B522EE068B0024DAA0 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		58ED40B922EE0B5A0024DAA0 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		58ED40BB22EE0F6E0024DAA0 /* RequestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResult.swift; sourceTree = "<group>"; };
+		58ED40BE22EE390C0024DAA0 /* CommitDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitDetails.swift; sourceTree = "<group>"; };
+		58ED40C022EE49F40024DAA0 /* Commit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
+		58ED40C222EE4A630024DAA0 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,7 @@
 		58ED407E22ED24E20024DAA0 /* GM_iOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				58ED40BD22EE10BA0024DAA0 /* Data Models */,
 				58ED40B822EE0B360024DAA0 /* Utility */,
 				58ED40B222EE01C50024DAA0 /* Network Manager */,
 				58ED40AD22EDEF0F0024DAA0 /* UI Components */,
@@ -157,8 +166,19 @@
 			isa = PBXGroup;
 			children = (
 				58ED40B922EE0B5A0024DAA0 /* AppConstants.swift */,
+				58ED40BB22EE0F6E0024DAA0 /* RequestResult.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		58ED40BD22EE10BA0024DAA0 /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				58ED40BE22EE390C0024DAA0 /* CommitDetails.swift */,
+				58ED40C022EE49F40024DAA0 /* Commit.swift */,
+				58ED40C222EE4A630024DAA0 /* Author.swift */,
+			);
+			path = "Data Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,10 +312,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58ED40C122EE49F40024DAA0 /* Commit.swift in Sources */,
 				58ED40B622EE068B0024DAA0 /* RequestManager.swift in Sources */,
 				58ED40BA22EE0B5A0024DAA0 /* AppConstants.swift in Sources */,
+				58ED40BC22EE0F6E0024DAA0 /* RequestResult.swift in Sources */,
+				58ED40C322EE4A630024DAA0 /* Author.swift in Sources */,
 				58ED40B422EE01DB0024DAA0 /* NetworkManager.swift in Sources */,
 				58ED40AF22EDF5E10024DAA0 /* UserCommitsViewController.swift in Sources */,
+				58ED40BF22EE390C0024DAA0 /* CommitDetails.swift in Sources */,
 				58ED408022ED24E20024DAA0 /* AppDelegate.swift in Sources */,
 				58ED40B122EDF6180024DAA0 /* UserCommitsTableViewCell.swift in Sources */,
 			);

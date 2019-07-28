@@ -11,12 +11,29 @@ import UIKit
 class UserCommitsViewController: UIViewController {
     @IBOutlet weak var tableViewUserCommits: UITableView!
     
+    var arrayCommits = Array<CommitDetails>()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        getCommitHistory()
+        
     }
 
+    func getCommitHistory(){
+        NetworkManager.shared.request(urlString: commitsListURL, completion: {
+            result in
+            switch result{
+            case .SUCCESS(let results) :
+                self.arrayCommits = results
+                break
+                
+            case .FAILURE(let failure):
+                print(failure)
+                break
+                
+            }
+        })
+    }
+    
 }
 
 //MARK: UITableViewDelegate & UITableViewDataSource

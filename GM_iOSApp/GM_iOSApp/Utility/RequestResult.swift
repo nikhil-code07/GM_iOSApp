@@ -1,5 +1,5 @@
 //
-//  AppConstants.swift
+//  RequestResult.swift
 //  GM_iOSApp
 //
 //  Created by Nikhil Murade on 7/28/19.
@@ -8,4 +8,7 @@
 
 import Foundation
 
-let commitsListURL = "https://api.github.com/repos/nikhil-code07/GM_iOSApp/commits"
+enum RequestResult<A>{
+    case SUCCESS(A)
+    case FAILURE(String)
+}

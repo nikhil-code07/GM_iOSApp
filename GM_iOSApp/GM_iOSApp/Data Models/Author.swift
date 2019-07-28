@@ -1,5 +1,5 @@
 //
-//  AppConstants.swift
+//  Author.swift
 //  GM_iOSApp
 //
 //  Created by Nikhil Murade on 7/28/19.
@@ -8,4 +8,8 @@
 
 import Foundation
 
-let commitsListURL = "https://api.github.com/repos/nikhil-code07/GM_iOSApp/commits"
+struct Author: Codable {
+    let name :String?
+    let email :String?
+    let date :String?
+}
