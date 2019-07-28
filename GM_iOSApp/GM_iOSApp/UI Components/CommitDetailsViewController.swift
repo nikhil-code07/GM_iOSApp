@@ -22,7 +22,7 @@ class CommitDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "Commit Details"
         labelCommiterName.text = committerName
         labelCommitHash.text = commithash
         textViewCommitMessage.text = commitMessage

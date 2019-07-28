@@ -15,6 +15,7 @@ class UserCommitsViewController: UIViewController {
     var arrayCommits = Array<CommitDetails>()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "User Commits"
         tableViewUserCommits.tableFooterView = UIView()
         activityIndicator.startAnimating()
         getCommitHistory()
