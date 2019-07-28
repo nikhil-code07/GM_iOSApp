@@ -9,22 +9,30 @@
 import UIKit
 
 class UserCommitsViewController: UIViewController {
-
+    @IBOutlet weak var tableViewUserCommits: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+
+}
+
+//MARK: UITableViewDelegate & UITableViewDataSource
+extension UserCommitsViewController:UITableViewDelegate,UITableViewDataSource{
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let userCommitsCell = tableView.dequeueReusableCell(withIdentifier: "UserCommitsCell", for: indexPath) as! UserCommitsTableViewCell
+        return userCommitsCell
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
 }

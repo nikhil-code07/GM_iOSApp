@@ -38,7 +38,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="uQt-cz-7em" customClass="UserCommitsTableViewCell" customModule="GM_iOSApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCommitsCell" rowHeight="100" id="uQt-cz-7em" customClass="UserCommitsTableViewCell" customModule="GM_iOSApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uQt-cz-7em" id="xQl-SI-3Ln">
@@ -77,8 +77,17 @@
                                                 <constraint firstItem="acb-bI-zrV" firstAttribute="top" secondItem="ive-PA-Rhq" secondAttribute="bottom" constant="3.5" id="nqY-os-56G"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelCommitHash" destination="acb-bI-zrV" id="KTR-jD-3G8"/>
+                                            <outlet property="labelCommitMessage" destination="j4u-vz-oZ7" id="3vI-ZR-T9T"/>
+                                            <outlet property="labelUserName" destination="ive-PA-Rhq" id="8Mz-CN-ZzE"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="y1C-AN-k7Z"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="naf-pC-px8"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -91,6 +100,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="afi-GW-kl3"/>
+                    <connections>
+                        <outlet property="tableViewUserCommits" destination="HJU-Ej-VAQ" id="hPC-26-nab"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

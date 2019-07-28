@@ -9,7 +9,10 @@
 import UIKit
 
 class UserCommitsTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var labelUserName: UILabel!
+    @IBOutlet weak var labelCommitHash: UILabel!
+    @IBOutlet weak var labelCommitMessage: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
