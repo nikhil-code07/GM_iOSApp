@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		58ED408022ED24E20024DAA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED407F22ED24E20024DAA0 /* AppDelegate.swift */; };
-		58ED408222ED24E20024DAA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED408122ED24E20024DAA0 /* ViewController.swift */; };
 		58ED408522ED24E20024DAA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58ED408322ED24E20024DAA0 /* Main.storyboard */; };
 		58ED408722ED24E60024DAA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58ED408622ED24E60024DAA0 /* Assets.xcassets */; };
 		58ED408A22ED24E60024DAA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58ED408822ED24E60024DAA0 /* LaunchScreen.storyboard */; };
 		58ED409522ED24E70024DAA0 /* GM_iOSAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED409422ED24E70024DAA0 /* GM_iOSAppTests.swift */; };
 		58ED40A022ED24E70024DAA0 /* GM_iOSAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED409F22ED24E70024DAA0 /* GM_iOSAppUITests.swift */; };
+		58ED40AF22EDF5E10024DAA0 /* UserCommitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED40AE22EDF5E10024DAA0 /* UserCommitsViewController.swift */; };
+		58ED40B122EDF6180024DAA0 /* UserCommitsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED40B022EDF6180024DAA0 /* UserCommitsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		58ED407C22ED24E20024DAA0 /* GM_iOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GM_iOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58ED407F22ED24E20024DAA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		58ED408122ED24E20024DAA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		58ED408422ED24E20024DAA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		58ED408622ED24E60024DAA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58ED408922ED24E60024DAA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		58ED409B22ED24E70024DAA0 /* GM_iOSAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GM_iOSAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58ED409F22ED24E70024DAA0 /* GM_iOSAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GM_iOSAppUITests.swift; sourceTree = "<group>"; };
 		58ED40A122ED24E70024DAA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58ED40AE22EDF5E10024DAA0 /* UserCommitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCommitsViewController.swift; sourceTree = "<group>"; };
+		58ED40B022EDF6180024DAA0 /* UserCommitsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCommitsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +99,8 @@
 		58ED407E22ED24E20024DAA0 /* GM_iOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				58ED40AD22EDEF0F0024DAA0 /* UI Components */,
 				58ED407F22ED24E20024DAA0 /* AppDelegate.swift */,
-				58ED408122ED24E20024DAA0 /* ViewController.swift */,
 				58ED408322ED24E20024DAA0 /* Main.storyboard */,
 				58ED408622ED24E60024DAA0 /* Assets.xcassets */,
 				58ED408822ED24E60024DAA0 /* LaunchScreen.storyboard */,
@@ -123,6 +125,15 @@
 				58ED40A122ED24E70024DAA0 /* Info.plist */,
 			);
 			path = GM_iOSAppUITests;
+			sourceTree = "<group>";
+		};
+		58ED40AD22EDEF0F0024DAA0 /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				58ED40AE22EDF5E10024DAA0 /* UserCommitsViewController.swift */,
+				58ED40B022EDF6180024DAA0 /* UserCommitsTableViewCell.swift */,
+			);
+			path = "UI Components";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +267,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58ED408222ED24E20024DAA0 /* ViewController.swift in Sources */,
+				58ED40AF22EDF5E10024DAA0 /* UserCommitsViewController.swift in Sources */,
 				58ED408022ED24E20024DAA0 /* AppDelegate.swift in Sources */,
+				58ED40B122EDF6180024DAA0 /* UserCommitsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
